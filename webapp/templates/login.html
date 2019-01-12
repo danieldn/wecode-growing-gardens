@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+    <h2></h2>
+</br>
+</br>
+    <h1>Login</h1>
+</br>
+</br>
+
+    <form method="POST" enctype="multipart/form-data">
+        <div  style="width: 200px; font-family: Montserrat;">
+          <label for="title">Username</label>
+          <input type="text" name="name" id="name" class="form-control"/>
+          <label for="title">Password</label>
+          <input type="password" name="password" id="password" class="form-control"/>
+        </div>
+    </form>
+</br>
+</br>
+    <a href='/dashboard' button class="btn btn-success">Login</a>
+
+{% endblock %}

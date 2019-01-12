@@ -7,10 +7,21 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-
 @app.route('/survey')
 def survey():
     return render_template('survey.html')
+
+@app.route('/login')
+def login():
+    return render_template('login.html')
+
+@app.route('/signup')
+def signup():
+    return render_template('signup.html')
+
+@app.route('/dashboard')
+def dashboard():
+    return render_template('dashboard.html')
 
 @app.route('/slack')
 def slack():
@@ -34,6 +45,22 @@ def slack_help():
             return resp
 
     return "slack help endpoint"
+
+@app.route('/slack-users', methods=['GET','POST'])
+def slack_users():
+    if request.method == 'POST':
+        # content = request.get_json()
+        # return "POST content:" + json.dumps(request.json)
+        # js = json.dumps(request.json)
+        with open('slack/users.json') as json_data:
+            js = json.load(json_data)
+            print(js)
+            # resp = Response(js, status=200, mimetype='application/json')
+            resp = json.jsonify(js)
+            # return resp
+            return resp
+
+    return "slack users endpoint"
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
