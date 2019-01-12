@@ -1,5 +1,6 @@
 import os
-from flask import Flask, request, Response, json
+import requests
+from flask import Flask, json
 from flask import render_template
 
 app = Flask(__name__)
@@ -10,6 +11,15 @@ def index():
 @app.route('/survey')
 def survey():
     return render_template('survey.html')
+
+@app.route('/survey-slack')
+def survey_slack():
+    print('survey slack....')
+    url = 'https://hooks.slack.com/services/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'
+    payload = {'text': 'Garden type":"Container Garden","Neighbors met":"Yes"'}
+    headers = {'content-type': 'application/json'}
+    response = requests.post(url, data=json.dumps(payload), headers=headers)
+    return render_template('dashboard.html')
 
 @app.route('/login')
 def login():
