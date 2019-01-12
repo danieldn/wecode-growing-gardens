@@ -30,6 +30,22 @@ def slack_help():
 
     return "slack help endpoint"
 
+@app.route('/slack-users', methods=['GET','POST'])
+def slack_users():
+    if request.method == 'POST':
+        # content = request.get_json()
+        # return "POST content:" + json.dumps(request.json)
+        # js = json.dumps(request.json)
+        with open('slack/users.json') as json_data:
+            js = json.load(json_data)
+            print(js)
+            # resp = Response(js, status=200, mimetype='application/json')
+            resp = json.jsonify(js)
+            # return resp
+            return resp
+
+    return "slack users endpoint"
+
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port, debug=False)
