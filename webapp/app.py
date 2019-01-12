@@ -1,8 +1,26 @@
 import os
-from flask import Flask, request, Response, json
+from flask import Flask, request, Response, json, redirect, session
 from flask import render_template
+from flask_login import LoginManager, UserMixin, login_required, login_user, logout_user
+
+users = []
+count = 0
 
 app = Flask(__name__)
+login_manager = LoginManager()
+login_manager.init_app(app)
+
+class User(UserMixin):
+    def __init__(self, id, user, password):
+        self.id = id
+        self.username = user
+        self.password = password
+
+    @classmethod
+    def get(id):
+        return self.users[id]
+
+
 @app.route("/")
 def index():
     return render_template('index.html')
@@ -11,13 +29,27 @@ def index():
 def survey():
     return render_template('survey.html')
 
-@app.route('/login')
+@app.route('/login', methods=['GET', 'POST'])
 def login():
-    return render_template('login.html')
+    return render_template('login.html', form=form)
 
-@app.route('/signup')
+@app.route('/signup', methods = ['GET', 'POST'])
 def signup():
-    return render_template('signup.html')
+    if request.method == 'POST':
+        global count
+        username = request.form['user']
+        password = request.form['password']
+        users.append(User(count, username, password))
+        count = count + 1
+        return render_template('dashboard.html', user=username)
+    else:
+        return Response('''
+        <form action="" method="post">
+            <p><input type=text name=user>
+            <p><input type=password name=password>
+            <p><input type=submit value=Signup>
+        </form>
+        ''')
 
 @app.route('/dashboard')
 def dashboard():
