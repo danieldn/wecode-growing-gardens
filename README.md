@@ -1,1 +1,1 @@
-# wecode-growing-gardens
+# Growing Gardens - Team 18

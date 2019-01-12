@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+    <h2></h2>
+</br>
+</br>
+    Install the Growing Garden app in your Slack workspace to receive events.
+</br>
+</br>
+
+    <form method="POST" enctype="multipart/form-data">
+        <div  style="width: 200px; font-family: Montserrat;">
+          <label for="title">Channel</label>
+          <input type="text" name="name" id="name" class="form-control"/>
+        </div>
+
+        <div  style="width: 200px; font-family: Montserrat;">
+        </br>
+            <label for="title">Users
+        </br>
+                <select name="Users">
+                        <option value="User">USER</option>
+                        <option value="Staff">STAFF</option>
+                      </select>
+            </label>
+          <!-- <label for="title">Event (e.g. PEDEVT)</label> -->
+          <!-- <input type="text" name="name" id="name" class="form-control"/> -->
+        </div>
+        
+      
+    </form>
+</br>
+</br>
+    <a href='/real-time-report2' button class="btn btn-success">Submit</a>
+
+{% endblock %}

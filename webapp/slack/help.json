@@ -1,0 +1,11 @@
+{
+    "text": "Welcome to Growing Garden's Slack App! Try some commands",
+    "attachments": [
+        {
+            "text":"/gghelp"
+        },
+        {
+            "text":"/ggreport"
+        }
+    ]
+}
