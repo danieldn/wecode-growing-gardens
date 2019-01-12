@@ -10,6 +10,7 @@
     <!-- Bootstrap optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <link href="/static/slider.css" rel="stylesheet">
+    <link rel="icon" href="/static/favicon.png">
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <!-- <script src="/static/lights.js"></script> -->
     <title>Growing Gardens - Home</title>
@@ -28,6 +29,14 @@
 }
 #right-pic1 {
   padding-bottom: 10px;
+}
+@media screen and (max-width: 580px) {
+  #profile-text {
+  width: 100%;
+  }
+  .right-pics {
+  width: 100%;
+}
 }
 
 </style>
@@ -52,6 +61,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li><a href="https://github.com/danieldn/wecode-growing-gardens" target="_blank" >GitHub</a></li>
         <li><a href="/">Logout</a></li>
+        <li><a href="/survey">Survey</a></li>
       </ul>
     </div>
   </div>
@@ -67,14 +77,14 @@
     </br>
       <h1>Profile</h1>
     </br>
-      <p id="profile-text">
-        <img class="profile" id="profile-pic" src="/static/user-pic.png">
-        <br>
-        Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. 
+    <p id="profile-text">
+      <img class="profile" id="profile-pic" src="/static/user-pic.png">
+      <br>
+      Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. 
       </p>
     </br>
     <div class="right-pics">
-      <img id="right-pic1" src="/static/user-pic.png">
+      <a class="twitter-timeline" data-height="400" href="https://twitter.com/growinggardens?ref_src=twsrc%5Etfw">Tweets by growinggardens</a>
       <img id="right-pic1" src="/static/user-pic.png">
     </div>
     </div>
@@ -86,7 +96,8 @@
   </footer>
 </div>
 
-
+<!-- Twitter feed -->
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <!-- JQuery Slider -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.3/jquery.csv.js"></script>
 <!-- Bootstrap latest compiled and minified JavaScript -->
