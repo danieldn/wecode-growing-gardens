@@ -13,53 +13,71 @@
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <!-- <script src="/static/lights.js"></script> -->
     <title>Growing Gardens - Home</title>
-<style>.embed-container {position: relative; padding-bottom: 80%; height: 0; max-width: 100%;} .embed-container iframe, .embed-container object, .embed-container iframe{position: absolute; top: 0; left: 0; width: 100%; height: 100%;} small{position: absolute; z-index: 40; bottom: 0; margin-bottom: -15px;}</style>
+<style>
+
+#profile-text {
+  width: 50%;
+  float: left;
+}
+#profile-pic {
+  width: 50%;
+}
+.right-pics {
+  float: right;
+  width: 50%;
+}
+#right-pic1 {
+  padding-bottom: 10px;
+}
+
+</style>
 </head>
 <body>
   <nav class="navbar navbar-inverse navbar-static-top">
-	<div class="container">
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
-			</button>
-			<a class="brand" href="/" style="text-decoration: none; color: #9d9d9d; font-size: 1.5em;">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="brand" href="/" style="text-decoration: none; color: #9d9d9d; font-size: 1.5em;">
         <img class="img-responsive" src="static/gglogo.png" style="display:inline-block; max-width: 45px; border-radius:50%; line-height: normal" alt="logo">
         <p style="display:inline-block; line-height: normal;
         margin-bottom:0px">GROW</p>
       </a>
-		</div>
-		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			<ul class="nav navbar-nav navbar-right">
-				<li><a href="https://github.com/danieldn/wecode-growing-gardens" target="_blank" >GitHub</a></li>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="https://github.com/danieldn/wecode-growing-gardens" target="_blank" >GitHub</a></li>
         <li><a href="/">Logout</a></li>
-			</ul>
-		</div>
-	</div>
+      </ul>
+    </div>
+  </div>
 </nav>
 
 <!-- <div class="absolute"><button id="userProfile">Try it out!</button></div> -->
 <div id=commentBox>
     <h1>Growing Garden Community Platform - Dashboard</h1>
-    <!-- <p><a href="https://www.growing-gardens.org" target="_blank">Official -->
-    <!-- Website</a></p> -->
 </div>
 
 
-    <!-- <div id="commentBox">
+    <div id="profile">
     </br>
+      <h1>Profile</h1>
     </br>
-      <h1>Empowering Community with Collaboration Tools</h1>
+      <p id="profile-text">
+        <img class="profile" id="profile-pic" src="/static/user-pic.png">
+        <br>
+        Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. 
+      </p>
     </br>
-    </br>
-      <div class="item2">
-        <img src="/static/slack-logo.jpg">
-        <a href="/slack" class="btn btn-success">Try the Grow Slack App!</a>
-        <button type="button" class="btn btn-success" ahref>Try our Slack App!</button>
-      </div>
-    </div> -->
+    <div class="right-pics">
+      <img id="right-pic1" src="/static/user-pic.png">
+      <img id="right-pic1" src="/static/user-pic.png">
+    </div>
+    </div>
 
 
   <footer>
