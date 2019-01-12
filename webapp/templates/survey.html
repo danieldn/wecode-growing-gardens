@@ -1,55 +1,55 @@
 {% extends "base.html" %}
 {% block content %}
-    <h2></h2>
+   <h2></h2>
 </br>
 </br>
-    Fill out the 2018 Survey
+   Please fill out the 2018 Survey.
 </br>
 </br>
 
-    <form method="POST" enctype="multipart/form-data">
+   <form method="POST" enctype="multipart/form-data">
 
-        <div  style="width: 200px; font-family: Montserrat;">
-        </br>
-            <label for="title">What type of garden are you looking for?
-        </br>
-                <select name="Garden">
-                        <option value="Container Garden">Container Garden</option>
-                        <option value="High Raised Bed (2ft)">High Raised Bed (2ft)</option>
-                        <option value="In-Ground/Mounded Earth">In-Ground/Mounded Earth</option>
-                      </select>
-            </label>
-          <!-- <label for="title">Event (e.g. PEDEVT)</label> -->
-          <!-- <input type="text" name="name" id="name" class="form-control"/> -->
-        </div>
-        
-      
-        <div  style="width: 200px; font-family: Montserrat;">
-            </br>
-                <label for="title">Did you meet any new neighbors because of gardening?
-            </br>
-                    <select name="Neighbors">
-                            <option value="Yes">Yes</option>
-                            <option value="No">No</option>
-                          </select>
-                </label>
-              <!-- <label for="title">Event (e.g. PEDEVT)</label> -->
-              <!-- <input type="text" name="name" id="name" class="form-control"/> -->
-            </div>
+       <div  style="width: 200px; font-family: Montserrat;">
+       </br>
+           <label for="title">What type of garden are you looking for?
+       </br>
+               <select style="color:limegreen" name="Garden">
+                       <option style="color:limegreen" value="Container Garden">Container Garden</option>
+                       <option style="color:limegreen" value="High Raised Bed (2ft)">High Raised Bed (2ft)</option>
+                       <option style="color:limegreen" value="In-Ground/Mounded Earth">In-Ground/Mounded Earth</option>
+                     </select>
+           </label>
+         <!-- <label for="title">Event (e.g. PEDEVT)</label> -->
+         <!-- <input type="text" name="name" id="name" class="form-control"/> -->
+       </div>
 
-            <div  style="width: 200px; font-family: Montserrat;">
-                </br>
-                    <label for="title">Have you been getting more exercise since you got involved in the garden?
-                </br>
-                        <select name="Involved">
-                                <option value="Yes">Yes</option>
-                                <option value="No">No</option>
-                              </select>
-                    </label>
-                  <!-- <label for="title">Event (e.g. PEDEVT)</label> -->
-                  <!-- <input type="text" name="name" id="name" class="form-control"/> -->
-                </div>
-    </form>
+
+       <div  style="width: 200px; font-family: Montserrat;">
+           </br>
+               <label for="title">Did you meet any new neighbors because of gardening?
+           </br>
+                   <select style="color:limegreen" name="Neighbors">
+                           <option style="color:limegreen" value="Yes">Yes</option>
+                           <option style="color:limegreen" value="No">No</option>
+                         </select>
+               </label>
+             <!-- <label for="title">Event (e.g. PEDEVT)</label> -->
+             <!-- <input type="text" name="name" id="name" class="form-control"/> -->
+           </div>
+
+           <div  style="width: 200px; font-family: Montserrat;">
+               </br>
+                   <label for="title">Have you been getting more exercise since you got involved in the garden?
+               </br>
+                       <select style="color:limegreen" name="Involved">
+                               <option style="color:limegreen" value="Yes">Yes</option>
+                               <option style="color:limegreen" value="No">No</option>
+                             </select>
+                   </label>
+                 <!-- <label for="title">Event (e.g. PEDEVT)</label> -->
+                 <!-- <input type="text" name="name" id="name" class="form-control"/> -->
+               </div>
+   </form>
 </br>
 </br>
     <a href='/dashboard' button class="btn btn-success">Submit</a>
