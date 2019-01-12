@@ -7,6 +7,10 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
+@app.route('/survey')
+def survey():
+    return render_template('survey.html')
+
 @app.route('/login')
 def login():
     return render_template('login.html')
@@ -61,3 +65,5 @@ def slack_users():
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port, debug=False)
+
+
